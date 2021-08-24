@@ -11,6 +11,7 @@ class AuxiliaryMethods
 {
 public:
     static string loadLine();
+    static float loadNumber();
     static int convertionStringToInt(string number);
 };
 #endif
