@@ -17,28 +17,20 @@ User UsersMenu::giveNewUserData()
 
     user.setId(loadIdNewUser());
 
-    string name;
     cout << "Podaj imie: ";
-    name = AuxiliaryMethods::loadLine();
-    user.setName(name);
+    user.setName(AuxiliaryMethods::loadLine());
 
-    string surname;
     cout << "Podaj nazwisko: ";
-    surname = AuxiliaryMethods::loadLine();
-    user.setSurname(surname);
+    user.setSurname(AuxiliaryMethods::loadLine());
 
-    string login;
     do
     {
         cout << "Podaj login: ";
-        login = AuxiliaryMethods::loadLine();
-        user.setLogin(login);
+        user.setLogin(AuxiliaryMethods::loadLine());
     }while (userNameExist(user.getLogin()) == true);
 
-    string password;
     cout << "Podaj haslo: ";
-    password = AuxiliaryMethods::loadLine();
-    user.setPassword(password);
+    user.setPassword(AuxiliaryMethods::loadLine());
 
     return user;
 }
@@ -67,7 +59,7 @@ int UsersMenu::loginUser()
     string login = "", password = "";
 
     cout << "Podaj login: ";
-    login = AuxiliaryMethods::loadLine());
+    login = AuxiliaryMethods::loadLine();
 
     for(int i = 0; i < users.size(); i++)
     {
@@ -127,7 +119,7 @@ bool UsersMenu::userIsLogged()
     else
         return false;
 }
-void UsersMenu::wypiszUzytkownikow()
+void UsersMenu::wypiszUzytkownikow()  //metoda do testow
 {
     for(int i = 0; i < users.size(); i++)
     {

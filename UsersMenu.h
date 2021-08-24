@@ -31,7 +31,8 @@ public:
     void logOutUser();
     bool userIsLogged();
     int loadIdLoggedUser();
-    void wypiszUzytkownikow();
+
+    void wypiszUzytkownikow(); //metoda do testow
 };
 
 

@@ -14,3 +14,26 @@ int AuxiliaryMethods::convertionStringToInt(string number)
 
     return numberInt;
 }
+double AuxiliaryMethods::loadNumber()
+{
+    string numberString = loadLine();
+    for(int i = 0; i < numberString.size(); i++)
+    {
+        if(numberString[i] == ',')
+        {
+            char dot = '.';
+            numberString[i] = dot;
+        }
+    }
+    double number = convertionStringToDouble(numberString);
+    return number;
+}
+double AuxiliaryMethods::convertionStringToDouble(string numberString)
+{
+    stringstream ss;
+    double number;
+    ss << numberString;
+    ss >> number;
+
+    return number;
+}

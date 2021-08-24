@@ -1,8 +1,11 @@
 #include <iostream>
+
 #include "UsersMenu.h"
 #include "XmlFile.h"
 #include "UsersFile.h"
 #include <windows.h>
+
+#include "IncomesMenu.h"
 
 using namespace std;
 
@@ -14,6 +17,7 @@ int main()
     cout << file.fileIsEmpty() << endl;
     system("pause");
     */
+    /*
     UsersMenu user("users.xml");
     user.userRegistration();
     user.userRegistration();
@@ -23,5 +27,10 @@ int main()
     user.logOutUser();
 
     //user.wypiszUzytkownikow();
+    */
+    IncomesMenu incomes(1,"incomes.xml");
+
+    incomes.wypiszWydatki();
+
     return 0;
 }
