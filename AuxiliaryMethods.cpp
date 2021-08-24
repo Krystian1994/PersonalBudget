@@ -14,7 +14,7 @@ int AuxiliaryMethods::convertionStringToInt(string number)
 
     return numberInt;
 }
-float AuxiliaryMethods::loadNumber()
+double AuxiliaryMethods::loadNumber()
 {
     string numberString = loadLine();
     for(int i = 0; i < numberString.size(); i++)
@@ -25,6 +25,11 @@ float AuxiliaryMethods::loadNumber()
             numberString[i] = dot;
         }
     }
+    double number = convertionStringToDouble(numberString);
+    return number;
+}
+double AuxiliaryMethods::convertionStringToDouble(string numberString)
+{
     stringstream ss;
     double number;
     ss << numberString;

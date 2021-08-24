@@ -28,12 +28,8 @@ int main()
 
     //user.wypiszUzytkownikow();
     */
-    IncomesMenu incomes(1);
-    incomes.addIncome();
-    incomes.wypiszWydatki();
-    incomes.addIncome();
-    incomes.wypiszWydatki();
-    incomes.addIncome();
+    IncomesMenu incomes(1,"incomes.xml");
+
     incomes.wypiszWydatki();
 
     return 0;

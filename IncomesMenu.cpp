@@ -8,7 +8,7 @@ void IncomesMenu::addIncome()
     income = giveNewIncomeData();
     incomes.push_back(income);
 
-    //dopisanie adresata do pliku
+    incomesFile.addIncomeToFile(income);
     cout << endl << "Dochod zostal dodany" << endl << endl;
     system("pause");
 }

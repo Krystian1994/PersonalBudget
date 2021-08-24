@@ -11,19 +11,19 @@ class Balance
     int operationId;
     string date;
     string item;
-    float amount;
+    double amount;
 public:
     int setUserId(int newUserId);
     int setOperationId(int newOperationId);
     string setDate(string newDate);
     string setItem(string newItem);
-    float setAmount(float newAmount);
+    double setAmount(double newAmount);
 
     int getUserId();
     int getOperationId();
     string getDate();
     string getItem();
-    float getAmount();
+    double getAmount();
 };
 
 

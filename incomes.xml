@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Incomes>
+<Income>
+<incomeId>13</incomeId>
+<userId>1</userId>
+<date>1994</date>
+<item>sprzedazy samochodu</item>
+<amount>4500</amount>
+</Income>
+<Income>
+<incomeId>13</incomeId>
+<userId>1</userId>
+<date>2020</date>
+<item>sprzedazy roweru</item>
+<amount>400</amount>
+</Income>
+<Income>
+<incomeId>13</incomeId>
+<userId>1</userId>
+<date>2021</date>
+<item>sprzedaz wisni na skupie</item>
+<amount>13000</amount>
+</Income>
+</Incomes>

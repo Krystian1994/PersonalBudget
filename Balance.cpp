@@ -20,7 +20,7 @@ string Balance::setItem(string newItem)
     item = newItem;
     return item;
 }
-float Balance::setAmount(float newAmount)
+double Balance::setAmount(double newAmount)
 {
     amount = newAmount;
     return amount;
@@ -33,7 +33,7 @@ string Balance::getItem()
 {
     return item;
 }
-float Balance::getAmount()
+double Balance::getAmount()
 {
     return amount;
 }
