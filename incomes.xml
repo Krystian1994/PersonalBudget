@@ -1,24 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Incomes>
 <Income>
-<incomeId>13</incomeId>
-<userId>1</userId>
-<date>1994</date>
-<item>sprzedazy samochodu</item>
-<amount>4500</amount>
-</Income>
-<Income>
-<incomeId>13</incomeId>
+<incomeId>1</incomeId>
 <userId>1</userId>
 <date>2020</date>
-<item>sprzedazy roweru</item>
-<amount>400</amount>
+<item>Sprzedaz hyundaia</item>
+<amount>30000</amount>
 </Income>
 <Income>
-<incomeId>13</incomeId>
+<incomeId>2</incomeId>
 <userId>1</userId>
 <date>2021</date>
-<item>sprzedaz wisni na skupie</item>
-<amount>13000</amount>
+<item>Sprzedaz mieszkania 550000.32</item>
+<amount>5000000</amount>
+</Income>
+<Income>
+<incomeId>3</incomeId>
+<userId>1</userId>
+<date>2008</date>
+<item>Sprzedaz ciagnika</item>
+<amount>30</amount>
+</Income>
+<Income>
+<incomeId>4</incomeId>
+<userId>1</userId>
+<date>2011</date>
+<item>sprzedaz ksiazek</item>
+<amount>13</amount>
 </Income>
 </Incomes>

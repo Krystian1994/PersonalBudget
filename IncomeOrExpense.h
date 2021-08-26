@@ -1,11 +1,11 @@
-#ifndef BALANCE_H
-#define BALANCE_H
+#ifndef INCOMEOREXPENSE_H
+#define INCOMEOREXPENSE_H
 
 #include <iostream>
 
 using namespace std;
 
-class Balance
+class IncomeOrExpense
 {
     int userId;
     int operationId;
@@ -27,4 +27,4 @@ public:
 };
 
 
-#endif BALANCE_H
+#endif INCOMEOREXPENSE_H

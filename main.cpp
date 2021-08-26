@@ -5,7 +5,7 @@
 #include "UsersFile.h"
 #include <windows.h>
 
-#include "IncomesMenu.h"
+#include "IncomesOrExpensesMenu.h"
 
 using namespace std;
 
@@ -28,8 +28,10 @@ int main()
 
     //user.wypiszUzytkownikow();
     */
-    IncomesMenu incomes(1,"incomes.xml");
+    IncomesOrExpensesMenu incomes(1,"incomes.xml");
 
+    incomes.addIncomeOrExpense();
+    incomes.addIncomeOrExpense();
     incomes.wypiszWydatki();
 
     return 0;
