@@ -3,33 +3,26 @@
 void IncomesOrExpensesMenu::addIncomeOrExpense()
 {
     IncomeOrExpense incomeOrExpense;
-    system("cls");
-
     incomeOrExpense = giveNewIncomeOrExpenseData();
     incomesOrExpenses.push_back(incomeOrExpense);
-
     incomesOrExpensesFile.addIncomeOrExpenseToFile(incomeOrExpense);
-    cout << endl << "Operacja finansowa zostala dodana" << endl << endl;
-    system("pause");
 }
 IncomeOrExpense IncomesOrExpensesMenu::giveNewIncomeOrExpenseData()
 {
     IncomeOrExpense incomeOrExpense;
 
     incomeOrExpense.setUserId(ID_LOGGED_USER);
-
-    incomeOrExpense.setOperationId(giveLastIdOperation() + 1);
+    incomeOrExpense.setOperationId((incomesOrExpensesFile.returnLastIdOperation() + 1)); //giveL
     cout << "Wybierz date operacji finansowej: ";
     incomeOrExpense.setDate(AuxiliaryMethods::loadLine()); //odniesienie do obiektu obslugujacego daty
-
     cout << "Wpisz czego dotyczy operacja finansowa: ";
     incomeOrExpense.setItem(AuxiliaryMethods::loadLine());
-
     cout << "Podaj kwote operacji finansowej: ";
     incomeOrExpense.setAmount(AuxiliaryMethods::loadNumber());
 
     return incomeOrExpense;
 }
+/*
 int IncomesOrExpensesMenu::giveLastIdOperation()
 {
     IncomeOrExpense incomeOrExpense;
@@ -45,6 +38,7 @@ int IncomesOrExpensesMenu::giveLastIdOperation()
         return idLastOperation;
     }
 }
+*/
 void IncomesOrExpensesMenu::wypiszWydatki()  //metoda do testow
 {
     for(int i = 0; i < incomesOrExpenses.size(); i++)

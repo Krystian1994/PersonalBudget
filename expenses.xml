@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Operations>
 <Operation>
-<incomeId>1</incomeId>
+<expenseId>1</expenseId>
 <userId>1</userId>
-<date>1234</date>
-<item>dfg</item>
+<date>14</date>
+<item>df</item>
 <amount>134</amount>
 </Operation>
 <Operation>
-<incomeId>2</incomeId>
+<expenseId>2</expenseId>
 <userId>1</userId>
-<date>1425</date>
-<item>dfg</item>
-<amount>3245</amount>
+<date>f</date>
+<item>df</item>
+<amount>134</amount>
 </Operation>
 </Operations>

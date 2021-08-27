@@ -21,12 +21,13 @@ class IncomesOrExpensesMenu
     IncomesOrExpensesFile incomesOrExpensesFile;
 
     IncomeOrExpense giveNewIncomeOrExpenseData();
-    int giveLastIdOperation();
+    //int giveLastIdOperation();
 public:
-    IncomesOrExpensesMenu(int idLoggedUser, string fileName): ID_LOGGED_USER(idLoggedUser), incomesOrExpensesFile(fileName)
+    IncomesOrExpensesMenu(int idLoggedUser, string fileName, string nameOfIdOperation)
+    :ID_LOGGED_USER(idLoggedUser), incomesOrExpensesFile(fileName,nameOfIdOperation)
     {
-        incomesOrExpenses = incomesOrExpensesFile.loadIncomesOrExpensesFromFile();
-    };
+        incomesOrExpenses = incomesOrExpensesFile.loadIncomesOrExpensesFromFile(ID_LOGGED_USER);// ID_LOGGED_USER jako argument metody
+    }
     void addIncomeOrExpense();
 
     void wypiszWydatki(); //metoda do testow

@@ -13,11 +13,20 @@ using namespace std;
 
 class IncomesOrExpensesFile: public XmlFile
 {
+    int idLastOperation;
     const string FILE_NAME;
+    const string NAME_OF_ID_OPERATION;
+
+    int giveLastIdOperation(vector <IncomeOrExpense> incomesOrExpenses);
 public:
-    IncomesOrExpensesFile(string fileName): FILE_NAME(fileName), XmlFile(fileName){};
+    IncomesOrExpensesFile(string fileName, string nameOfIdOperation)
+    : FILE_NAME(fileName), XmlFile(fileName), NAME_OF_ID_OPERATION(nameOfIdOperation)
+    {
+        idLastOperation = 0;
+    };
     void addIncomeOrExpenseToFile(IncomeOrExpense incomeOrExpense);
-    vector <IncomeOrExpense> loadIncomesOrExpensesFromFile();
+    vector <IncomeOrExpense> loadIncomesOrExpensesFromFile(int idLoggedUser);
+    int returnLastIdOperation();
 };
 
 #endif INCOMESOREXPENSESFILE_H
