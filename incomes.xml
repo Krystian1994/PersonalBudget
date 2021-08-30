@@ -1,17 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Operations>
 <Operation>
-<incomeId>1</incomeId>
 <userId>1</userId>
-<date>1234</date>
-<item>dfg</item>
-<amount>134</amount>
+<incomeId>1</incomeId>
+<date>2011</date>
+<item>Sprzedaz roweru</item>
+<amount>2500</amount>
 </Operation>
 <Operation>
-<incomeId>2</incomeId>
 <userId>1</userId>
-<date>1425</date>
-<item>dfg</item>
-<amount>3245</amount>
+<incomeId>2</incomeId>
+<date>2005</date>
+<item>sprzedaz komputera</item>
+<amount>399</amount>
+</Operation>
+<Operation>
+<userId>2</userId>
+<incomeId>1</incomeId>
+<date>2012</date>
+<item>sprzedaz kota</item>
+<amount>45</amount>
+</Operation>
+<Operation>
+<userId>1</userId>
+<incomeId>3</incomeId>
+<date>2021</date>
+<item>sprzedaz domu</item>
+<amount>299000</amount>
+</Operation>
+<Operation>
+<userId>3</userId>
+<incomeId>1</incomeId>
+<date>2003</date>
+<item>sprzedaz id 3</item>
+<amount>2456</amount>
+</Operation>
+<Operation>
+<userId>1</userId>
+<incomeId>4</incomeId>
+<date>2001</date>
+<item>sprzedaz</item>
+<amount>2001111</amount>
 </Operation>
 </Operations>

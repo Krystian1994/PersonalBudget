@@ -14,5 +14,6 @@ public:
     static double loadNumber();
     static int convertionStringToInt(string number);
     static double convertionStringToDouble(string numberString);
+    static string convertionIntToString(int number);
 };
 #endif

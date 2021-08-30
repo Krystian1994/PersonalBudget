@@ -1,17 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Operations>
 <Operation>
-<expenseId>1</expenseId>
 <userId>1</userId>
-<date>14</date>
-<item>df</item>
-<amount>134</amount>
+<expenseId>1</expenseId>
+<date>2009</date>
+<item>kupno samochodu</item>
+<amount>5999</amount>
 </Operation>
 <Operation>
-<expenseId>2</expenseId>
 <userId>1</userId>
-<date>f</date>
-<item>df</item>
-<amount>134</amount>
+<expenseId>2</expenseId>
+<date>2012</date>
+<item>kupno kosiarki </item>
+<amount>900</amount>
+</Operation>
+<Operation>
+<userId>2</userId>
+<expenseId>1</expenseId>
+<date>kupno roweru</date>
+<item>kupno roweru</item>
+<amount>2334</amount>
+</Operation>
+<Operation>
+<userId>1</userId>
+<expenseId>3</expenseId>
+<date>2020</date>
+<item>kupno samochodu</item>
+<amount>99932</amount>
+</Operation>
+<Operation>
+<userId>3</userId>
+<expenseId>1</expenseId>
+<date>2003</date>
+<item>kupno id 3</item>
+<amount>9994</amount>
+</Operation>
+<Operation>
+<userId>1</userId>
+<expenseId>4</expenseId>
+<date>2001</date>
+<item>kupno id 1 kolejna</item>
+<amount>2494</amount>
 </Operation>
 </Operations>

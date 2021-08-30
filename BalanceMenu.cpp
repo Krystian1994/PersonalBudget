@@ -21,6 +21,7 @@ void BalanceMenu::showBalanceCurrentMonth()
     cout << "Wydatki : "<< endl;
     expense.wypiszWydatki();
 
+    system("pause");
 }
 void BalanceMenu::showBalancePreviousMonth()
 {

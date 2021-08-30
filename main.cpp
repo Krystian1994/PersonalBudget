@@ -6,7 +6,7 @@
 #include <windows.h>
 
 #include "BalanceMenu.h"
-
+#include "AuxiliaryMethods.h"
 using namespace std;
 
 int main()
@@ -28,12 +28,13 @@ int main()
 
     //user.wypiszUzytkownikow();
     */
-    BalanceMenu balance(1,"incomes.xml","expenses.xml");
+    BalanceMenu balance(3,"incomes.xml","expenses.xml");
 
-    balance.addIncome();
-    balance.addExpense();
+    //balance.addIncome();
+    //balance.addExpense();
 
     balance.showBalanceCurrentMonth();
+
 
     return 0;
 }

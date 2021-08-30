@@ -12,7 +12,8 @@ IncomeOrExpense IncomesOrExpensesMenu::giveNewIncomeOrExpenseData()
     IncomeOrExpense incomeOrExpense;
 
     incomeOrExpense.setUserId(ID_LOGGED_USER);
-    incomeOrExpense.setOperationId((incomesOrExpensesFile.returnLastIdOperation() + 1)); //giveL
+    incomeOrExpense.setOperationId(incomesOrExpensesFile.returnLastIdOperation()+1);// dodaj id operacji
+
     cout << "Wybierz date operacji finansowej: ";
     incomeOrExpense.setDate(AuxiliaryMethods::loadLine()); //odniesienie do obiektu obslugujacego daty
     cout << "Wpisz czego dotyczy operacja finansowa: ";
@@ -22,23 +23,6 @@ IncomeOrExpense IncomesOrExpensesMenu::giveNewIncomeOrExpenseData()
 
     return incomeOrExpense;
 }
-/*
-int IncomesOrExpensesMenu::giveLastIdOperation()
-{
-    IncomeOrExpense incomeOrExpense;
-
-    int idLastOperation = 0;
-    if(incomesOrExpenses.empty() == true)
-    {
-        idLastOperation = 0;
-        return idLastOperation;
-    }else{
-        incomeOrExpense = incomesOrExpenses.back();
-        idLastOperation = incomeOrExpense.getOperationId();
-        return idLastOperation;
-    }
-}
-*/
 void IncomesOrExpensesMenu::wypiszWydatki()  //metoda do testow
 {
     for(int i = 0; i < incomesOrExpenses.size(); i++)

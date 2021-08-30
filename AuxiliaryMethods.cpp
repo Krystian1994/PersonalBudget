@@ -37,3 +37,10 @@ double AuxiliaryMethods::convertionStringToDouble(string numberString)
 
     return number;
 }
+string AuxiliaryMethods::convertionIntToString(int number)
+{
+    ostringstream ss;
+    ss << number;
+    string str = ss.str();
+    return str;
+}
