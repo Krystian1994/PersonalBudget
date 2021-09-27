@@ -28,10 +28,11 @@ int main()
 
     //user.wypiszUzytkownikow();
     */
-    BalanceMenu balance(3,"incomes.xml","expenses.xml");
+    BalanceMenu balance(1,"incomes.xml","expenses.xml");
 
     //balance.addIncome();
-    //balance.addExpense();
+    //balance.addIncome();
+    balance.addExpense();
 
     balance.showBalanceCurrentMonth();
 

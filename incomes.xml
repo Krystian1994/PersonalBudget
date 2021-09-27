@@ -3,43 +3,36 @@
 <Operation>
 <userId>1</userId>
 <incomeId>1</incomeId>
-<date>2011</date>
-<item>Sprzedaz roweru</item>
-<amount>2500</amount>
-</Operation>
-<Operation>
-<userId>1</userId>
-<incomeId>2</incomeId>
-<date>2005</date>
-<item>sprzedaz komputera</item>
-<amount>399</amount>
+<date>2021</date>
+<item>Sprzedaz samochodu</item>
+<amount>27000</amount>
 </Operation>
 <Operation>
 <userId>2</userId>
 <incomeId>1</incomeId>
-<date>2012</date>
-<item>sprzedaz kota</item>
-<amount>45</amount>
+<date>2020</date>
+<item>Sprzedaz telefonnu</item>
+<amount>400</amount>
 </Operation>
 <Operation>
-<userId>1</userId>
+<userId>2</userId>
+<incomeId>2</incomeId>
+<date>2020</date>
+<item>Sprzedaz wina</item>
+<amount>5</amount>
+</Operation>
+<Operation>
+<userId>2</userId>
 <incomeId>3</incomeId>
-<date>2021</date>
-<item>sprzedaz domu</item>
-<amount>299000</amount>
-</Operation>
-<Operation>
-<userId>3</userId>
-<incomeId>1</incomeId>
-<date>2003</date>
-<item>sprzedaz id 3</item>
-<amount>2456</amount>
+<date>2020</date>
+<item>Sprzedaz ciala</item>
+<amount>300</amount>
 </Operation>
 <Operation>
 <userId>1</userId>
-<incomeId>4</incomeId>
-<date>2001</date>
-<item>sprzedaz</item>
-<amount>2001111</amount>
+<incomeId>2</incomeId>
+<date>2021</date>
+<item>Sprzedaz zegarka </item>
+<amount>500</amount>
 </Operation>
 </Operations>

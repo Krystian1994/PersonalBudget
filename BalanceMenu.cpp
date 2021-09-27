@@ -15,7 +15,7 @@ void BalanceMenu::addExpense()
     system("pause");
 }
 void BalanceMenu::showBalanceCurrentMonth()
-{
+{ //do testow
     cout << "Dochody : "<< endl;
     income.wypiszWydatki();
     cout << "Wydatki : "<< endl;
