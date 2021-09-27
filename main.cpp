@@ -7,6 +7,8 @@
 
 #include "BalanceMenu.h"
 #include "AuxiliaryMethods.h"
+#include "DateOperation.h"
+
 using namespace std;
 
 int main()
@@ -30,11 +32,13 @@ int main()
     */
     BalanceMenu balance(1,"incomes.xml","expenses.xml");
 
+    balance.addIncome();
     //balance.addIncome();
-    //balance.addIncome();
-    balance.addExpense();
+    //balance.addExpense();
 
     balance.showBalanceCurrentMonth();
+
+    //DateOperation dateOperation;
 
 
     return 0;

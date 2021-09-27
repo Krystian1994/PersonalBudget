@@ -15,7 +15,7 @@ IncomeOrExpense IncomesOrExpensesMenu::giveNewIncomeOrExpenseData()
     incomeOrExpense.setOperationId(incomesOrExpensesFile.returnLastIdOperation()+1);// dodaj id operacji
 
     cout << "Wybierz date operacji finansowej: ";
-    incomeOrExpense.setDate(AuxiliaryMethods::loadLine()); //odniesienie do obiektu obslugujacego daty
+    incomeOrExpense.setDate(DateOperation::getSelectedDate());
     cout << "Wpisz czego dotyczy operacja finansowa: ";
     incomeOrExpense.setItem(AuxiliaryMethods::loadLine());
     cout << "Podaj kwote operacji finansowej: ";
