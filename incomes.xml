@@ -3,15 +3,8 @@
 <Operation>
 <userId>1</userId>
 <incomeId>1</incomeId>
-<date>2021-09-27</date>
-<item/>
-<amount>222</amount>
-</Operation>
-<Operation>
-<userId>1</userId>
-<incomeId>2</incomeId>
-<date>2021-09-27</date>
-<item/>
-<amount>222</amount>
+<date>2021-09-30</date>
+<item>Sprzedaz domu</item>
+<amount>930</amount>
 </Operation>
 </Operations>

@@ -32,14 +32,13 @@ int main()
     */
     BalanceMenu balance(1,"incomes.xml","expenses.xml");
 
-    balance.addIncome();
     //balance.addIncome();
-    //balance.addExpense();
+    //balance.addIncome();
+    balance.addExpense();
 
     balance.showBalanceCurrentMonth();
 
-    //DateOperation dateOperation;
-
+    //DateOperation::getSelectedDate();
 
     return 0;
 }

@@ -35,19 +35,22 @@ string DateOperation::getSelectedDate()
 {
     cout << endl <<  "Aby wybrac dzisiejsza date, wybierz: 1" << endl;
     cout << "Aby wpisac date recznie, wybierz: 2" << endl;
+
     int choice = 0;
     string date = "";
     cin >> choice;
-    switch (choice)
+    cin.ignore();
+    cin.sync();   //funkcje umozliwiajace zastosowanie getline.
+    switch(choice)
     {
     case 1:
         date = getCurrentDate();
         break;
     case 2:
-        string selectedDateByUser = AuxiliaryMethods::loadLine();//dodac warunek sprawdzajacy poprawnosc wpisanej daty
+        cout << "Wprowadz date w formacie rrrr-mm-dd" << endl;
+        string selectedDateByUser = AuxiliaryMethods::loadLine();          //dodac warunek sprawdzajacy poprawnosc wpisanej daty
         date = selectedDateByUser;
         break;
     }
-
     return date;
 }
