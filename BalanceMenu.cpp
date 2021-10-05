@@ -25,9 +25,9 @@ void BalanceMenu::showBalanceCurrentMonth()
 }
 void BalanceMenu::showBalancePreviousMonth()
 {
-
+    cout << "W trakcie tworzenia" << endl;
 }
 void BalanceMenu::showBalanceSelectedPeriod()
 {
-
+    cout << "W trakcie tworzenia" << endl;
 }
