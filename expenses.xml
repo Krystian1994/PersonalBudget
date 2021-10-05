@@ -3,57 +3,15 @@
 <Operation>
 <userId>1</userId>
 <expenseId>1</expenseId>
-<date>12.09.2021</date>
-<item>Kupno samochodu</item>
-<amount>90</amount>
+<date>2020-02-29</date>
+<item>Kupno pilki</item>
+<amount>12</amount>
 </Operation>
 <Operation>
 <userId>1</userId>
 <expenseId>2</expenseId>
-<date>2021-10-03</date>
-<item>Kupno iphona</item>
-<amount>2200</amount>
-</Operation>
-<Operation>
-<userId>1</userId>
-<expenseId>3</expenseId>
-<date>2021-10-12</date>
-<item>Kupno 100h pola</item>
-<amount>10000000</amount>
-</Operation>
-<Operation>
-<userId>1</userId>
-<expenseId>4</expenseId>
 <date>2021-10-05</date>
-<item>Kupno wody</item>
-<amount>2</amount>
-</Operation>
-<Operation>
-<userId>1</userId>
-<expenseId>5</expenseId>
-<date>2021-10-29</date>
-<item>Kupno samochodu</item>
-<amount>20000</amount>
-</Operation>
-<Operation>
-<userId>1</userId>
-<expenseId>6</expenseId>
-<date/>
-<item>Kupno mydla</item>
-<amount>20</amount>
-</Operation>
-<Operation>
-<userId>1</userId>
-<expenseId>7</expenseId>
-<date>2020-02-29</date>
-<item>Kupno domu w Sandomingo</item>
-<amount>300000</amount>
-</Operation>
-<Operation>
-<userId>1</userId>
-<expenseId>8</expenseId>
-<date>2021-10-05</date>
-<item>Kupna laptopa na firme</item>
-<amount>2000</amount>
+<item>Kupno chusteczek</item>
+<amount>10</amount>
 </Operation>
 </Operations>

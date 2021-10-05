@@ -1,44 +1,105 @@
 #include <iostream>
 
-#include "UsersMenu.h"
-#include "XmlFile.h"
-#include "UsersFile.h"
-#include <windows.h>
-
-#include "BalanceMenu.h"
-#include "AuxiliaryMethods.h"
-#include "DateOperation.h"
+#include "PersonalBudget.h"
 
 using namespace std;
 
+char selectCharacterFromMainMenu()
+{
+    char choice;
+
+    system("cls");
+    cout << "    >>> MENU  GLOWNE <<<" << endl;
+    cout << "---------------------------" << endl;
+    cout << "1. Rejestracja" << endl;
+    cout << "2. Logowanie" << endl;
+    cout << "8. Koniec programu" << endl;
+    cout << "---------------------------" << endl;
+    cout << "Twoj wybor: ";
+    choice = AuxiliaryMethods::loadCharacter();
+
+    return choice;
+}
+char selectCharacterFromUserMenu()
+{
+    char choice;
+
+    system("cls");
+    cout << " >>> MENU UZYTKOWNIKA <<<" << endl;
+    cout << "---------------------------" << endl;
+    cout << "1. Dodaj dochod" << endl;
+    cout << "2. Dodaj wydatek" << endl;
+    cout << "3. Bilans z bierzacego miesiaca" << endl;
+    cout << "4. Bilans z poprzedniego miesiaca" << endl;
+    cout << "5. Bilans z wybranego okresu" << endl;
+    cout << "---------------------------" << endl;
+    cout << "6. Zmien haslo" << endl;
+    cout << "7. Wyloguj sie" << endl;
+    cout << "---------------------------" << endl;
+    cout << "Twoj wybor: ";
+    choice = AuxiliaryMethods::loadCharacter();
+
+    return choice;
+}
 int main()
 {
-    /*
-    XmlFile file("users.xml");
-    cout << file.returnFileName() << endl;
-    cout << file.fileIsEmpty() << endl;
-    system("pause");
-    */
-    /*
-    UsersMenu user("users.xml");
-    user.userRegistration();
-    user.userRegistration();
+    PersonalBudget personalBudget("users.xml","incomes.xml","expenses.xml");
 
-    user.loginUser();
-    user.changePasswordOfLoggedUser();
-    user.logOutUser();
+    char choice;
+    while (true)
+    {
+        if (personalBudget.isTheUserLoggedIn()!=true)
+        {
+            choice = selectCharacterFromMainMenu();
 
-    //user.wypiszUzytkownikow();
-    */
-    BalanceMenu balance(1,"incomes.xml","expenses.xml");
+            switch (choice)
+            {
+            case '1':
+                personalBudget.registration();
+                break;
+            case '2':
+                personalBudget.login();
+                break;
+            case '8':
+                exit(0);
+                break;
+            default:
+                cout << endl << "Nie ma takiej opcji w menu." << endl << endl;
+                system("pause");
+                break;
+            }
+        }
+        else
+        {
+            if (personalBudget.isTheUserLoggedIn())
 
-    //balance.addIncome();
-    //balance.addIncome();
-    balance.addExpense();
+            choice = selectCharacterFromUserMenu();
 
-    balance.showBalanceCurrentMonth();
-
-    //DateOperation::getSelectedDate();
-
+            switch (choice)
+            {
+            case '1':
+                personalBudget.addIncome();
+                break;
+            case '2':
+                personalBudget.addExpense();
+                break;
+            case '3':
+                personalBudget.balanceFromCurrentMonth();
+                break;
+            case '4':
+                personalBudget.balanceFromPreviousMonth();
+                break;
+            case '5':
+                personalBudget.balanceFromSelectedTerm();
+                break;
+            case '6':
+                personalBudget.changePassword();
+                break;
+            case '7':
+                personalBudget.logOutUser();
+                break;
+            }
+        }
+    }
     return 0;
 }

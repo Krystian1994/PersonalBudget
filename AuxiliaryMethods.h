@@ -15,5 +15,6 @@ public:
     static int convertionStringToInt(string number);
     static double convertionStringToDouble(string numberString);
     static string convertionIntToString(int number);
+    static char loadCharacter();
 };
 #endif
