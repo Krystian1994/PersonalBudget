@@ -23,8 +23,14 @@ IncomeOrExpense IncomesOrExpensesMenu::giveNewIncomeOrExpenseData()
 
     return incomeOrExpense;
 }
+void IncomesOrExpensesMenu::sortingVector()
+{
+    sort(incomesOrExpenses.begin(),incomesOrExpenses.end(), [](const IncomeOrExpense &a, const IncomeOrExpense &b)
+    {return a.date < b.date;});
+}
 void IncomesOrExpensesMenu::wypiszWydatki()  //metoda do testow
 {
+    sortingVector();
     for(int i = 0; i < incomesOrExpenses.size(); i++)
     {
         cout << incomesOrExpenses[i].getUserId() << endl;

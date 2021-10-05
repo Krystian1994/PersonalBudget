@@ -9,10 +9,11 @@ class IncomeOrExpense
 {
     int userId;
     int operationId;
-    string date;
     string item;
     double amount;
 public:
+    string date;
+
     int setUserId(int newUserId);
     int setOperationId(int newOperationId);
     string setDate(string newDate);

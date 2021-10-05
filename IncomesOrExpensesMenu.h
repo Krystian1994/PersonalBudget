@@ -6,6 +6,7 @@
 #include <windows.h>
 #include <fstream>
 #include <sstream>
+#include <algorithm>
 
 #include "IncomeOrExpense.h"
 #include "AuxiliaryMethods.h"
@@ -22,6 +23,8 @@ class IncomesOrExpensesMenu
     IncomesOrExpensesFile incomesOrExpensesFile;
 
     IncomeOrExpense giveNewIncomeOrExpenseData();
+
+    void sortingVector();
     //int giveLastIdOperation();
 public:
     IncomesOrExpensesMenu(int idLoggedUser, string fileName, string nameOfIdOperation)

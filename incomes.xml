@@ -35,4 +35,11 @@
 <item>Sprzedaz zeszytow</item>
 <amount>45</amount>
 </Operation>
+<Operation>
+<userId>1</userId>
+<incomeId>4</incomeId>
+<date>2021-10-05</date>
+<item>Sprzedaz roweru</item>
+<amount>2001</amount>
+</Operation>
 </Operations>
