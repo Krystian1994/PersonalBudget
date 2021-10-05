@@ -10,6 +10,7 @@
 #include "IncomeOrExpense.h"
 #include "AuxiliaryMethods.h"
 #include "IncomesOrExpensesFile.h"
+#include "DateOperation.h"
 
 using namespace std;
 

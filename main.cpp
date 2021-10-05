@@ -7,6 +7,8 @@
 
 #include "BalanceMenu.h"
 #include "AuxiliaryMethods.h"
+#include "DateOperation.h"
+
 using namespace std;
 
 int main()
@@ -36,6 +38,7 @@ int main()
 
     balance.showBalanceCurrentMonth();
 
+    //DateOperation::getSelectedDate();
 
     return 0;
 }
