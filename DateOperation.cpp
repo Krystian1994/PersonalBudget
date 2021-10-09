@@ -159,3 +159,34 @@ bool DateOperation::ifLoadDateIsCurrentMonth(string date)
     }
     return true;
 }
+bool DateOperation::ifLoadDateIsPreviousMonth(string date)
+{
+    int currentMonth = returnCurrentMonth();
+    int currentYear = returnCurrentYear();
+    string yearString = "";
+    int yearInt = 0;
+    string monthString = "";
+    int monthInt = 0;
+    for(int i = 0; i < 4; i++){
+        yearString += date[i];
+    }
+    yearInt = AuxiliaryMethods::convertionStringToInt(yearString);
+    for(int i = 5; i < 7; i++){
+        monthString += date[i];
+    }
+    monthInt = AuxiliaryMethods::convertionStringToInt(monthString);
+
+    if(yearInt == currentYear && currentMonth != 1 && (currentMonth - monthInt) == 1){
+        return true;
+    }else if((currentYear - yearInt) == 1 && currentMonth == 1 && monthInt == 12){
+        return true;
+    }else{
+        return false;
+    }
+}
+bool DateOperation::checkSelectedDates(string startingDate, string endingDate)
+{
+    if(checkIntroducedDate(startingDate) && checkIntroducedDate(startingDate) && startingDate <= endingDate){
+           return true;
+       }else{return false;};
+}

@@ -31,8 +31,9 @@ public:
         incomesOrExpenses = incomesOrExpensesFile.loadIncomesOrExpensesFromFile(ID_LOGGED_USER);// ID_LOGGED_USER jako argument metody
     }
     void addIncomeOrExpense();
-
-    int wypiszWydatki(); //metoda do testow
+    int showBalanceCurrentMonth();
+    int showBalancePreviousMonth();
+    int showBalanceSelectedPeriod(string startingDate,string endingDate);
 };
 
 #endif INCOMESOREXPENSESMENU_H

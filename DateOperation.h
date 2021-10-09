@@ -24,6 +24,8 @@ class DateOperation
 public:
     static string getSelectedDate();
     static bool ifLoadDateIsCurrentMonth(string date);
+    static bool ifLoadDateIsPreviousMonth(string date);
+    static bool checkSelectedDates(string startingDate, string endingDate);
 };
 
 #endif DATEOPERATION_H

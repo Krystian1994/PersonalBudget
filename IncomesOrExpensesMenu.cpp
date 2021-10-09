@@ -28,7 +28,7 @@ void IncomesOrExpensesMenu::sortingVector()
     sort(incomesOrExpenses.begin(),incomesOrExpenses.end(), [](const IncomeOrExpense &a, const IncomeOrExpense &b)
     {return a.date < b.date;});
 }
-int IncomesOrExpensesMenu::wypiszWydatki()  //metoda do testow
+int IncomesOrExpensesMenu::showBalanceCurrentMonth()  //metoda do testow
 {
     sortingVector();
     string date="";
@@ -37,6 +37,48 @@ int IncomesOrExpensesMenu::wypiszWydatki()  //metoda do testow
     {
         date = incomesOrExpenses[i].getDate();
         if(DateOperation::ifLoadDateIsCurrentMonth(date))
+        {
+            cout << incomesOrExpenses[i].getUserId() << endl;
+            cout << incomesOrExpenses[i].getOperationId() << endl;
+            cout << incomesOrExpenses[i].getDate() << endl;
+            cout << incomesOrExpenses[i].getItem() << endl;
+            cout << incomesOrExpenses[i].getAmount() << endl;
+            cout << "-----------------" << endl;
+            balance += incomesOrExpenses[i].getAmount();
+        }
+    }
+    return balance;
+}
+int IncomesOrExpensesMenu::showBalancePreviousMonth()
+{
+    sortingVector();
+    string date="";
+    double balance = 0;
+    for(int i = 0; i < incomesOrExpenses.size(); i++)
+    {
+        date = incomesOrExpenses[i].getDate();
+        if(DateOperation::ifLoadDateIsPreviousMonth(date))
+        {
+            cout << incomesOrExpenses[i].getUserId() << endl;
+            cout << incomesOrExpenses[i].getOperationId() << endl;
+            cout << incomesOrExpenses[i].getDate() << endl;
+            cout << incomesOrExpenses[i].getItem() << endl;
+            cout << incomesOrExpenses[i].getAmount() << endl;
+            cout << "-----------------" << endl;
+            balance += incomesOrExpenses[i].getAmount();
+        }
+    }
+    return balance;
+}
+int IncomesOrExpensesMenu::showBalanceSelectedPeriod(string startingDate,string endingDate)
+{
+    sortingVector();
+    string date="";
+    double balance = 0;
+    for(int i = 0; i < incomesOrExpenses.size(); i++)
+    {
+        date = incomesOrExpenses[i].getDate();
+        if(startingDate <= date && date <= endingDate)
         {
             cout << incomesOrExpenses[i].getUserId() << endl;
             cout << incomesOrExpenses[i].getOperationId() << endl;
