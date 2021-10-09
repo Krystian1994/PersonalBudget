@@ -6,6 +6,7 @@
 #include <windows.h>
 #include <fstream>
 #include <sstream>
+#include <algorithm>
 
 #include "IncomeOrExpense.h"
 #include "AuxiliaryMethods.h"
@@ -18,10 +19,10 @@ class IncomesOrExpensesMenu
 {
     const int ID_LOGGED_USER;
     vector <IncomeOrExpense> incomesOrExpenses;
-
     IncomesOrExpensesFile incomesOrExpensesFile;
-
     IncomeOrExpense giveNewIncomeOrExpenseData();
+
+    void sortingVector();
     //int giveLastIdOperation();
 public:
     IncomesOrExpensesMenu(int idLoggedUser, string fileName, string nameOfIdOperation)
@@ -30,8 +31,9 @@ public:
         incomesOrExpenses = incomesOrExpensesFile.loadIncomesOrExpensesFromFile(ID_LOGGED_USER);// ID_LOGGED_USER jako argument metody
     }
     void addIncomeOrExpense();
-
-    void wypiszWydatki(); //metoda do testow
+    int showBalanceCurrentMonth();
+    int showBalancePreviousMonth();
+    int showBalanceSelectedPeriod(string startingDate,string endingDate);
 };
 
 #endif INCOMESOREXPENSESMENU_H

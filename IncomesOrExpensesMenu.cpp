@@ -23,14 +23,71 @@ IncomeOrExpense IncomesOrExpensesMenu::giveNewIncomeOrExpenseData()
 
     return incomeOrExpense;
 }
-void IncomesOrExpensesMenu::wypiszWydatki()  //metoda do testow
+void IncomesOrExpensesMenu::sortingVector()
 {
+    sort(incomesOrExpenses.begin(),incomesOrExpenses.end(), [](const IncomeOrExpense &a, const IncomeOrExpense &b)
+    {return a.date < b.date;});
+}
+int IncomesOrExpensesMenu::showBalanceCurrentMonth()  //metoda do testow
+{
+    sortingVector();
+    string date="";
+    double balance = 0;
     for(int i = 0; i < incomesOrExpenses.size(); i++)
     {
-        cout << incomesOrExpenses[i].getUserId() << endl;
-        cout << incomesOrExpenses[i].getOperationId() << endl;
-        cout << incomesOrExpenses[i].getDate() << endl;
-        cout << incomesOrExpenses[i].getItem() << endl;
-        cout << incomesOrExpenses[i].getAmount() << endl;
+        date = incomesOrExpenses[i].getDate();
+        if(DateOperation::ifLoadDateIsCurrentMonth(date))
+        {
+            cout << incomesOrExpenses[i].getUserId() << endl;
+            cout << incomesOrExpenses[i].getOperationId() << endl;
+            cout << incomesOrExpenses[i].getDate() << endl;
+            cout << incomesOrExpenses[i].getItem() << endl;
+            cout << incomesOrExpenses[i].getAmount() << endl;
+            cout << "-----------------" << endl;
+            balance += incomesOrExpenses[i].getAmount();
+        }
     }
+    return balance;
+}
+int IncomesOrExpensesMenu::showBalancePreviousMonth()
+{
+    sortingVector();
+    string date="";
+    double balance = 0;
+    for(int i = 0; i < incomesOrExpenses.size(); i++)
+    {
+        date = incomesOrExpenses[i].getDate();
+        if(DateOperation::ifLoadDateIsPreviousMonth(date))
+        {
+            cout << incomesOrExpenses[i].getUserId() << endl;
+            cout << incomesOrExpenses[i].getOperationId() << endl;
+            cout << incomesOrExpenses[i].getDate() << endl;
+            cout << incomesOrExpenses[i].getItem() << endl;
+            cout << incomesOrExpenses[i].getAmount() << endl;
+            cout << "-----------------" << endl;
+            balance += incomesOrExpenses[i].getAmount();
+        }
+    }
+    return balance;
+}
+int IncomesOrExpensesMenu::showBalanceSelectedPeriod(string startingDate,string endingDate)
+{
+    sortingVector();
+    string date="";
+    double balance = 0;
+    for(int i = 0; i < incomesOrExpenses.size(); i++)
+    {
+        date = incomesOrExpenses[i].getDate();
+        if(startingDate <= date && date <= endingDate)
+        {
+            cout << incomesOrExpenses[i].getUserId() << endl;
+            cout << incomesOrExpenses[i].getOperationId() << endl;
+            cout << incomesOrExpenses[i].getDate() << endl;
+            cout << incomesOrExpenses[i].getItem() << endl;
+            cout << incomesOrExpenses[i].getAmount() << endl;
+            cout << "-----------------" << endl;
+            balance += incomesOrExpenses[i].getAmount();
+        }
+    }
+    return balance;
 }
