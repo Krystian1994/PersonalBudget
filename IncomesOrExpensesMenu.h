@@ -19,9 +19,7 @@ class IncomesOrExpensesMenu
 {
     const int ID_LOGGED_USER;
     vector <IncomeOrExpense> incomesOrExpenses;
-
     IncomesOrExpensesFile incomesOrExpensesFile;
-
     IncomeOrExpense giveNewIncomeOrExpenseData();
 
     void sortingVector();
@@ -34,7 +32,7 @@ public:
     }
     void addIncomeOrExpense();
 
-    void wypiszWydatki(); //metoda do testow
+    int wypiszWydatki(); //metoda do testow
 };
 
 #endif INCOMESOREXPENSESMENU_H

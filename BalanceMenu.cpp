@@ -15,12 +15,17 @@ void BalanceMenu::addExpense()
     system("pause");
 }
 void BalanceMenu::showBalanceCurrentMonth()
-{ //do testow
-    cout << "Dochody : "<< endl;
-    income.wypiszWydatki();
+{
+    system("cls");
+    int balance = 0;
+    cout << "Przychody : "<< endl;
+    int incomesSum = income.wypiszWydatki();
     cout << "Wydatki : "<< endl;
-    expense.wypiszWydatki();
-
+    int expenseSum = expense.wypiszWydatki();
+    cout << endl << "Suma przychodow wynosi " << incomesSum << endl;
+    cout << endl << "Suma wydatkow wynosi " << expenseSum << endl;
+    balance = incomesSum + expenseSum;
+    cout << endl << "Bilans w obecnym miesiacu wynosi " << balance << endl;
     system("pause");
 }
 void BalanceMenu::showBalancePreviousMonth()

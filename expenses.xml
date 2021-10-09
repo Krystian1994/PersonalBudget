@@ -35,4 +35,11 @@
 <item>Kupno trzecie</item>
 <amount>90</amount>
 </Operation>
+<Operation>
+<userId>1</userId>
+<expenseId>6</expenseId>
+<date>2021-10-30</date>
+<item>Kupno pierwsze</item>
+<amount>4423</amount>
+</Operation>
 </Operations>

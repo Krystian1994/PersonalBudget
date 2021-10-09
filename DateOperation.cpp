@@ -147,3 +147,15 @@ int DateOperation::returnCurrentMonth()
     month = st.wMonth;
     return month;
 }
+bool DateOperation::ifLoadDateIsCurrentMonth(string date)
+{
+    string currentDate = getCurrentDate();
+    for(int i = 0; i < 7; i++) //sprawdzanie czy to obecny miesiac
+    {
+        if(date[i] != currentDate[i])
+        {
+            return false;
+        }
+    }
+    return true;
+}

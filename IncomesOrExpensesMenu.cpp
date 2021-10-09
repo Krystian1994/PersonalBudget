@@ -28,15 +28,24 @@ void IncomesOrExpensesMenu::sortingVector()
     sort(incomesOrExpenses.begin(),incomesOrExpenses.end(), [](const IncomeOrExpense &a, const IncomeOrExpense &b)
     {return a.date < b.date;});
 }
-void IncomesOrExpensesMenu::wypiszWydatki()  //metoda do testow
+int IncomesOrExpensesMenu::wypiszWydatki()  //metoda do testow
 {
     sortingVector();
+    string date="";
+    double balance = 0;
     for(int i = 0; i < incomesOrExpenses.size(); i++)
     {
-        cout << incomesOrExpenses[i].getUserId() << endl;
-        cout << incomesOrExpenses[i].getOperationId() << endl;
-        cout << incomesOrExpenses[i].getDate() << endl;
-        cout << incomesOrExpenses[i].getItem() << endl;
-        cout << incomesOrExpenses[i].getAmount() << endl;
+        date = incomesOrExpenses[i].getDate();
+        if(DateOperation::ifLoadDateIsCurrentMonth(date))
+        {
+            cout << incomesOrExpenses[i].getUserId() << endl;
+            cout << incomesOrExpenses[i].getOperationId() << endl;
+            cout << incomesOrExpenses[i].getDate() << endl;
+            cout << incomesOrExpenses[i].getItem() << endl;
+            cout << incomesOrExpenses[i].getAmount() << endl;
+            cout << "-----------------" << endl;
+            balance += incomesOrExpenses[i].getAmount();
+        }
     }
+    return balance;
 }
