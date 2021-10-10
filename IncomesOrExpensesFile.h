@@ -16,8 +16,6 @@ class IncomesOrExpensesFile: public XmlFile
     int idLastOperation;
     const string FILE_NAME;
     const string NAME_OF_ID_OPERATION;
-
-    int giveLastIdOperation(vector <IncomeOrExpense> incomesOrExpenses);
 public:
     IncomesOrExpensesFile(string fileName, string nameOfIdOperation)
     : FILE_NAME(fileName), XmlFile(fileName), NAME_OF_ID_OPERATION(nameOfIdOperation)

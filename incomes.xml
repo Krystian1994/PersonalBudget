@@ -3,57 +3,29 @@
 <Operation>
 <userId>1</userId>
 <incomeId>1</incomeId>
-<date>2021-10-05</date>
-<item>Sprzedaz mieszkania</item>
-<amount>550000</amount>
+<date>2021-10-10</date>
+<item>Sprzedaz wisni</item>
+<amount>12345</amount>
 </Operation>
 <Operation>
 <userId>1</userId>
 <incomeId>2</incomeId>
-<date>2020-12-11</date>
-<item>Sprzedaz samochodu</item>
-<amount>27500</amount>
+<date>2021-10-10</date>
+<item>Sprzedaz jablek</item>
+<amount>4432</amount>
 </Operation>
 <Operation>
-<userId>1</userId>
+<userId>2</userId>
 <incomeId>3</incomeId>
-<date>2021-09-13</date>
-<item>Srzedaz wisni</item>
-<amount>10000</amount>
-</Operation>
-<Operation>
-<userId>2</userId>
-<incomeId>1</incomeId>
-<date>2021-10-05</date>
-<item>Sprzedaz ksiazek</item>
-<amount>334</amount>
-</Operation>
-<Operation>
-<userId>2</userId>
-<incomeId>2</incomeId>
-<date>2021-10-05</date>
-<item>Sprzedaz zeszytow</item>
-<amount>45</amount>
+<date>2021-10-10</date>
+<item>Uslugi weselne</item>
+<amount>4992</amount>
 </Operation>
 <Operation>
 <userId>1</userId>
 <incomeId>4</incomeId>
-<date>2021-10-05</date>
-<item>Sprzedaz roweru</item>
-<amount>2001</amount>
-</Operation>
-<Operation>
-<userId>1</userId>
-<incomeId>5</incomeId>
-<date>2021-10-09</date>
-<item>Sprzedaz pierwsza</item>
-<amount>234</amount>
-</Operation>
-<Operation>
-<userId>1</userId>
-<incomeId>6</incomeId>
-<date>2021-10-04</date>
-<item>sprzedaz druga</item>
-<amount>49</amount>
+<date>2021-10-10</date>
+<item>Sprzedaz zlomu</item>
+<amount>453</amount>
 </Operation>
 </Operations>

@@ -48,21 +48,12 @@ vector <IncomeOrExpense> IncomesOrExpensesFile::loadIncomesOrExpensesFromFile(in
             incomeOrExpense.setAmount(AuxiliaryMethods::convertionStringToDouble(xml.GetData()));
             incomesOrExpenses.push_back(incomeOrExpense);
         }
+        xml.FindElem(NAME_OF_ID_OPERATION);
+        incomeOrExpense.setOperationId(atoi(MCD_2PCSZ(xml.GetData())));
+        idLastOperation = incomeOrExpense.getOperationId();
         xml.OutOfElem();
     }
-    idLastOperation = giveLastIdOperation(incomesOrExpenses);
     return incomesOrExpenses;
-}
-int IncomesOrExpensesFile::giveLastIdOperation(vector <IncomeOrExpense> incomesOrExpenses)
-{
-    int idOperation = 0;
-    if(incomesOrExpenses.empty())
-    {
-        return idOperation;
-    }else{
-        idOperation = incomesOrExpenses.back().getOperationId();
-        return idOperation;
-    }
 }
 int IncomesOrExpensesFile::returnLastIdOperation()
 {
