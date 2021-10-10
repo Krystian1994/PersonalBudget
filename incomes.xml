@@ -28,4 +28,18 @@
 <item>Sprzedaz zlomu</item>
 <amount>453</amount>
 </Operation>
+<Operation>
+<userId>1</userId>
+<incomeId>454</incomeId>
+<date>2021-10-10</date>
+<item>Sprzedaz</item>
+<amount>123.550000</amount>
+</Operation>
+<Operation>
+<userId>2</userId>
+<incomeId>455</incomeId>
+<date>2021-10-10</date>
+<item>Sprzedaz obiadu Krystiankowi</item>
+<amount>12.550000</amount>
+</Operation>
 </Operations>

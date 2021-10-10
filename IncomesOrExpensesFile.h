@@ -2,6 +2,7 @@
 #define INCOMESOREXPENSESFILE_H
 
 #include <iostream>
+#include <string>
 #include <vector>
 
 #include "IncomeOrExpense.h"

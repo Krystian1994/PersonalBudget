@@ -17,7 +17,7 @@ void IncomesOrExpensesFile::addIncomeOrExpenseToFile(IncomeOrExpense incomeOrExp
     xml.AddElem(NAME_OF_ID_OPERATION,incomeOrExpense.getOperationId());
     xml.AddElem("date",incomeOrExpense.getDate());
     xml.AddElem("item",incomeOrExpense.getItem());
-    xml.AddElem("amount",incomeOrExpense.getAmount());
+    xml.AddElem("amount",to_string(incomeOrExpense.getAmount()));
 
     xml.Save(FILE_NAME);
 

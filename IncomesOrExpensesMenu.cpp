@@ -28,7 +28,7 @@ void IncomesOrExpensesMenu::sortingVector()
     sort(incomesOrExpenses.begin(),incomesOrExpenses.end(), [](const IncomeOrExpense &a, const IncomeOrExpense &b)
     {return a.date < b.date;});
 }
-int IncomesOrExpensesMenu::showBalanceCurrentMonth()  //metoda do testow
+double IncomesOrExpensesMenu::showBalanceCurrentMonth()
 {
     sortingVector();
     string date="";
@@ -49,7 +49,7 @@ int IncomesOrExpensesMenu::showBalanceCurrentMonth()  //metoda do testow
     }
     return balance;
 }
-int IncomesOrExpensesMenu::showBalancePreviousMonth()
+double IncomesOrExpensesMenu::showBalancePreviousMonth()
 {
     sortingVector();
     string date="";
@@ -70,7 +70,7 @@ int IncomesOrExpensesMenu::showBalancePreviousMonth()
     }
     return balance;
 }
-int IncomesOrExpensesMenu::showBalanceSelectedPeriod(string startingDate,string endingDate)
+double IncomesOrExpensesMenu::showBalanceSelectedPeriod(string startingDate,string endingDate)
 {
     sortingVector();
     string date="";

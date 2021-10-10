@@ -21,9 +21,7 @@ class IncomesOrExpensesMenu
     vector <IncomeOrExpense> incomesOrExpenses;
     IncomesOrExpensesFile incomesOrExpensesFile;
     IncomeOrExpense giveNewIncomeOrExpenseData();
-
     void sortingVector();
-    //int giveLastIdOperation();
 public:
     IncomesOrExpensesMenu(int idLoggedUser, string fileName, string nameOfIdOperation)
     :ID_LOGGED_USER(idLoggedUser), incomesOrExpensesFile(fileName,nameOfIdOperation)
@@ -31,9 +29,9 @@ public:
         incomesOrExpenses = incomesOrExpensesFile.loadIncomesOrExpensesFromFile(ID_LOGGED_USER);// ID_LOGGED_USER jako argument metody
     }
     void addIncomeOrExpense();
-    int showBalanceCurrentMonth();
-    int showBalancePreviousMonth();
-    int showBalanceSelectedPeriod(string startingDate,string endingDate);
+    double showBalanceCurrentMonth();
+    double showBalancePreviousMonth();
+    double showBalanceSelectedPeriod(string startingDate,string endingDate);
 };
 
 #endif INCOMESOREXPENSESMENU_H

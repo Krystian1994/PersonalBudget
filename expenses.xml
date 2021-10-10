@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Operations>
+<Operation>
+<userId>1</userId>
+<expenseId>1</expenseId>
+<date>2021-10-10</date>
+<item>Kupno</item>
+<amount>1243.560000</amount>
+</Operation>
+</Operations>
