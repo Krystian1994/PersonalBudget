@@ -88,21 +88,21 @@ bool DateOperation::checkIntroducedDate(string date)
     }
     daysInt = AuxiliaryMethods::convertionStringToInt(dayString);
 
-    if(date[4] == '-' && date[7] == '-'){
-        if(yearInt >= minYear && yearInt <= currentYear){
-            if(monthInt > 0 && monthInt <= 12){
-                if(daysInt >= 1 && daysInt <= howManyDaysHaveMonth(yearInt,monthInt)){
-                       if(yearInt == currentYear && monthInt == currentMonth && daysInt <= howManyDaysHaveMonth(currentYear,currentMonth)){
-                           return true;
-                       }else if(yearInt == currentYear && monthInt < currentMonth){
-                           return true;
-                       }else if(yearInt < currentYear){
-                           return true;
-                       }else {return false;}
-                   }else{return false;}
-            }else{return false;}
-        }else{return false;}
-    }else{return false;}
+    if(date[4] != '-' && date[7] != '-')
+        return false;
+    if(yearInt < minYear || yearInt > currentYear)
+        return false;
+    if(monthInt <= 0 || monthInt > 12)
+        return false;
+    if(daysInt < 1 || daysInt > howManyDaysHaveMonth(yearInt,monthInt))
+        return false;
+    if(yearInt == currentYear && monthInt == currentMonth && daysInt <= howManyDaysHaveMonth(currentYear,currentMonth)){
+           return true;
+       }else if(yearInt == currentYear && monthInt < currentMonth){
+           return true;
+       }else if(yearInt < currentYear){
+           return true;
+       }else {return false;}
 }
 int DateOperation::howManyDaysHaveMonth(int year,int month)
 {

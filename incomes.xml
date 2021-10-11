@@ -42,4 +42,11 @@
 <item>Sprzedaz obiadu Krystiankowi</item>
 <amount>12.550000</amount>
 </Operation>
+<Operation>
+<userId>1</userId>
+<incomeId>456</incomeId>
+<date>2021-10-31</date>
+<item>sprzedaz lezaka</item>
+<amount>123.330000</amount>
+</Operation>
 </Operations>
