@@ -21,6 +21,7 @@ class DateOperation
     static int howManyDaysHaveMonth(int year,int month);
     static int returnCurrentYear();
     static int returnCurrentMonth();
+    static bool yearIsLeap(int year);
 public:
     static string getSelectedDate();
     static bool ifLoadDateIsCurrentMonth(string date);

@@ -123,7 +123,7 @@ int DateOperation::howManyDaysHaveMonth(int year,int month)
             return 30;
         }
     }
-    if(((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) && (month == february))
+    if(yearIsLeap(year) && month == february)
     {
         return 29;
     }else {
@@ -189,4 +189,12 @@ bool DateOperation::checkSelectedDates(string startingDate, string endingDate)
     if(checkIntroducedDate(startingDate) && checkIntroducedDate(startingDate) && startingDate <= endingDate){
            return true;
        }else{return false;};
+}
+bool DateOperation::yearIsLeap(int year)
+{
+    if(year % 4 != 0)
+        return false;
+    if(year % 100 != 0 || year % 400 == 0){
+        return true;
+    }else{return false;}
 }
