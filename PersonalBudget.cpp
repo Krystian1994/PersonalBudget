@@ -7,9 +7,9 @@ void PersonalBudget::registration()
 void PersonalBudget::login()
 {
     usersMenu.loginUser();
-    if(usersMenu.userIsLogged())
-    {
-        balanceMenu = new BalanceMenu(usersMenu.loadIdLoggedUser(),INCOME_FILE_NAME,EXPENSE_FILE_NAME);
+
+    if(usersMenu.userIsLogged()) {
+        balanceMenu = new BalanceMenu(usersMenu.loadIdLoggedUser(), INCOME_FILE_NAME, EXPENSE_FILE_NAME);
     }
 }
 bool PersonalBudget::isTheUserLoggedIn()
@@ -18,18 +18,18 @@ bool PersonalBudget::isTheUserLoggedIn()
 }
 void PersonalBudget::addIncome()
 {
-    if(usersMenu.userIsLogged()){
+    if(usersMenu.userIsLogged()) {
         balanceMenu->addIncome();
-    }else{
+    } else {
         cout << "Aby dodac dochod nalezy sie zalogowac." << endl;
         system("pause");
     }
 }
 void PersonalBudget::addExpense()
 {
-    if(usersMenu.userIsLogged()){
+    if(usersMenu.userIsLogged()) {
         balanceMenu->addExpense();
-    }else{
+    } else {
         cout << "Aby dodac wydatek nalezy sie zalogowac." << endl;
         system("pause");
     }

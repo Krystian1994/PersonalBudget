@@ -24,14 +24,14 @@ class IncomesOrExpensesMenu
     void sortingVector();
 public:
     IncomesOrExpensesMenu(int idLoggedUser, string fileName, string nameOfIdOperation)
-    :ID_LOGGED_USER(idLoggedUser), incomesOrExpensesFile(fileName,nameOfIdOperation)
+        : ID_LOGGED_USER(idLoggedUser), incomesOrExpensesFile(fileName, nameOfIdOperation)
     {
         incomesOrExpenses = incomesOrExpensesFile.loadIncomesOrExpensesFromFile(ID_LOGGED_USER);// ID_LOGGED_USER jako argument metody
     }
     void addIncomeOrExpense();
     double showBalanceCurrentMonth();
     double showBalancePreviousMonth();
-    double showBalanceSelectedPeriod(string startingDate,string endingDate);
+    double showBalanceSelectedPeriod(string startingDate, string endingDate);
 };
 
-#endif INCOMESOREXPENSESMENU_H
+#endif

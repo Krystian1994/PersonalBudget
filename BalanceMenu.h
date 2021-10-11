@@ -14,7 +14,7 @@ class BalanceMenu
     IncomesOrExpensesMenu expense;
 public:
     BalanceMenu(int idLoggedUser, string incomeFileName, string expenseFileName)
-    : income(idLoggedUser,incomeFileName,"incomeId"), expense(idLoggedUser,expenseFileName,"expenseId") {}
+        : income(idLoggedUser, incomeFileName, "incomeId"), expense(idLoggedUser, expenseFileName, "expenseId") {}
     void addIncome();
     void addExpense();
     void showBalanceCurrentMonth();
@@ -22,4 +22,4 @@ public:
     void showBalanceSelectedPeriod();
 };
 
-#endif BALANCEMENU_H
+#endif

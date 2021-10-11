@@ -4,10 +4,11 @@ bool XmlFile::fileIsEmpty()
 {
     CMarkup xml;
     bool fileExists = xml.Load(returnFileName());
-    if (!fileExists)
-    {
+
+    if (!fileExists) {
         return false;
     }
+
     return true;
 }
 string XmlFile::returnFileName()

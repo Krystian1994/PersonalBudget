@@ -19,7 +19,6 @@ public:
     void setDate(string newDate);
     void setItem(string newItem);
     void setAmount(double newAmount);
-
     int getUserId();
     int getOperationId();
     string getDate();
@@ -27,5 +26,4 @@ public:
     double getAmount();
 };
 
-
-#endif INCOMEOREXPENSE_H
+#endif

@@ -17,14 +17,14 @@ int AuxiliaryMethods::convertionStringToInt(string number)
 double AuxiliaryMethods::loadNumber()
 {
     string numberString = loadLine();
-    for(int i = 0; i < numberString.size(); i++)
-    {
-        if(numberString[i] == ',')
-        {
+
+    for(int i = 0; i < numberString.size(); i++) {
+        if(numberString[i] == ',') {
             char dot = '.';
             numberString[i] = dot;
         }
     }
+
     double number = convertionStringToDouble(numberString);
     return number;
 }
@@ -49,16 +49,16 @@ char AuxiliaryMethods::loadCharacter()
     string enter = "";
     char character  = {0};
 
-    while (true)
-    {
+    while (true) {
         getline(cin, enter);
 
-        if (enter.length() == 1)
-        {
+        if (enter.length() == 1) {
             character = enter[0];
             break;
         }
+
         cout << "To nie jest pojedynczy znak. Wpisz ponownie." << endl;
     }
+
     return character;
 }

@@ -15,17 +15,14 @@ string DateOperation::getCurrentDate()
     string monthString = AuxiliaryMethods::convertionIntToString(month);
     string dayString = AuxiliaryMethods::convertionIntToString(day);
     string currentDate = "";
-    if(month >= 10 && day >= 10)
-    {
+
+    if(month >= 10 && day >= 10) {
         currentDate = yearString + "-" + monthString + "-" + dayString;
-    }else if(month >= 10 && day < 10)
-    {
+    } else if(month >= 10 && day < 10) {
         currentDate = yearString + "-" + monthString + "-0" + dayString;
-    }else if(month < 10 && day >= 10)
-    {
+    } else if(month < 10 && day >= 10) {
         currentDate = yearString + "-0" + monthString + "-" + dayString;
-    }else if(month < 10 && day < 10)
-    {
+    } else if(month < 10 && day < 10) {
         currentDate = yearString + "-0" + monthString + "-0" + dayString;
     }
 
@@ -33,35 +30,35 @@ string DateOperation::getCurrentDate()
 }
 string DateOperation::getSelectedDate()
 {
-        cout << endl <<  "Aby wybrac dzisiejsza date, wybierz: 1" << endl;
-        cout << "Aby wpisac date recznie, wybierz: 2" << endl;
-        string date = "";
-        int choice = 0;
-        cin >> choice;
-        cin.ignore();
-        cin.sync();   //funkcje umozliwiajace zastosowanie getline.
-        switch(choice)
-        {
-        case 1:
-            date = getCurrentDate();
-            return date;
-        case 2:
-            while(true)
-            {
-                cout << "Wprowadz date w formacie rrrr-mm-dd" << endl;
-                cout << "Date nalezy wprowadzic w przedziale 2000-01-01 do " << returnCurrentYear() << '-' << returnCurrentMonth() << '-' << howManyDaysHaveMonth(returnCurrentYear(),returnCurrentMonth()) << endl;
-                string selectedDateByUser = AuxiliaryMethods::loadLine();
-                if(checkIntroducedDate(selectedDateByUser) == true)
-                {
-                    date = selectedDateByUser;
-                    return date;
-                }else{
-                    cout << "Blad! Prosze wprowadzic date zgodnie z wytycznymi." << endl;
-                    Sleep(1000);
-                    system("cls");
-                }
+    cout << endl <<  "Aby wybrac dzisiejsza date, wybierz: 1" << endl;
+    cout << "Aby wpisac date recznie, wybierz: 2" << endl;
+    string date = "";
+    int choice = 0;
+    cin >> choice;
+    cin.ignore();
+    cin.sync();   //funkcje umozliwiajace zastosowanie getline.
+
+    switch(choice) {
+    case 1:
+        date = getCurrentDate();
+        return date;
+
+    case 2:
+        while(true) {
+            cout << "Wprowadz date w formacie rrrr-mm-dd" << endl;
+            cout << "Date nalezy wprowadzic w przedziale 2000-01-01 do " << returnCurrentYear() << '-' << returnCurrentMonth() << '-' << howManyDaysHaveMonth(returnCurrentYear(), returnCurrentMonth()) << endl;
+            string selectedDateByUser = AuxiliaryMethods::loadLine();
+
+            if(checkIntroducedDate(selectedDateByUser) == true) {
+                date = selectedDateByUser;
+                return date;
+            } else {
+                cout << "Blad! Prosze wprowadzic date zgodnie z wytycznymi." << endl;
+                Sleep(1000);
+                system("cls");
             }
         }
+    }
 }
 bool DateOperation::checkIntroducedDate(string date)
 {
@@ -75,58 +72,67 @@ bool DateOperation::checkIntroducedDate(string date)
     int currentYear = returnCurrentYear();
     int currentMonth = returnCurrentMonth();
 
-    for(int i = 0; i < 4; i++){
+    for(int i = 0; i < 4; i++) {
         yearString += date[i];
     }
+
     yearInt = AuxiliaryMethods::convertionStringToInt(yearString);
-    for(int i = 5; i < 7; i++){
+
+    for(int i = 5; i < 7; i++) {
         monthString += date[i];
     }
+
     monthInt = AuxiliaryMethods::convertionStringToInt(monthString);
-    for(int i = 8; i <= 9; i++){
+
+    for(int i = 8; i <= 9; i++) {
         dayString += date[i];
     }
+
     daysInt = AuxiliaryMethods::convertionStringToInt(dayString);
 
     if(date[4] != '-' && date[7] != '-')
         return false;
+
     if(yearInt < minYear || yearInt > currentYear)
         return false;
+
     if(monthInt <= 0 || monthInt > 12)
         return false;
-    if(daysInt < 1 || daysInt > howManyDaysHaveMonth(yearInt,monthInt))
+
+    if(daysInt < 1 || daysInt > howManyDaysHaveMonth(yearInt, monthInt))
         return false;
-    if(yearInt == currentYear && monthInt == currentMonth && daysInt <= howManyDaysHaveMonth(currentYear,currentMonth)){
-           return true;
-       }else if(yearInt == currentYear && monthInt < currentMonth){
-           return true;
-       }else if(yearInt < currentYear){
-           return true;
-       }else {return false;}
+
+    if(yearInt == currentYear && monthInt == currentMonth && daysInt <= howManyDaysHaveMonth(currentYear, currentMonth)) {
+        return true;
+    } else if(yearInt == currentYear && monthInt < currentMonth) {
+        return true;
+    } else if(yearInt < currentYear) {
+        return true;
+    } else {
+        return false;
+    }
 }
-int DateOperation::howManyDaysHaveMonth(int year,int month)
+int DateOperation::howManyDaysHaveMonth(int year, int month)
 {
-    int month31[7] = {1,3,5,7,8,10,12};
-    int month30[4] = {4,6,9,11};
+    int month31[7] = {1, 3, 5, 7, 8, 10, 12};
+    int month30[4] = {4, 6, 9, 11};
     int february = 2;
-    for(int i = 0; i < 7; i++)
-    {
-        if(month == month31[i])
-        {
+
+    for(int i = 0; i < 7; i++) {
+        if(month == month31[i]) {
             return 31;
         }
     }
-    for(int i = 0; i < 4; i++)
-    {
-        if(month == month30[i])
-        {
+
+    for(int i = 0; i < 4; i++) {
+        if(month == month30[i]) {
             return 30;
         }
     }
-    if(yearIsLeap(year) && month == february)
-    {
+
+    if(yearIsLeap(year) && month == february) {
         return 29;
-    }else {
+    } else {
 
         return 28;
     }
@@ -150,13 +156,13 @@ int DateOperation::returnCurrentMonth()
 bool DateOperation::ifLoadDateIsCurrentMonth(string date)
 {
     string currentDate = getCurrentDate();
-    for(int i = 0; i < 7; i++) //sprawdzanie czy to obecny miesiac
-    {
-        if(date[i] != currentDate[i])
-        {
+
+    for(int i = 0; i < 7; i++) {
+        if(date[i] != currentDate[i]) {
             return false;
         }
     }
+
     return true;
 }
 bool DateOperation::ifLoadDateIsPreviousMonth(string date)
@@ -167,34 +173,43 @@ bool DateOperation::ifLoadDateIsPreviousMonth(string date)
     int yearInt = 0;
     string monthString = "";
     int monthInt = 0;
-    for(int i = 0; i < 4; i++){
+
+    for(int i = 0; i < 4; i++) {
         yearString += date[i];
     }
+
     yearInt = AuxiliaryMethods::convertionStringToInt(yearString);
-    for(int i = 5; i < 7; i++){
+
+    for(int i = 5; i < 7; i++) {
         monthString += date[i];
     }
+
     monthInt = AuxiliaryMethods::convertionStringToInt(monthString);
 
-    if(yearInt == currentYear && currentMonth != 1 && (currentMonth - monthInt) == 1){
+    if(yearInt == currentYear && currentMonth != 1 && (currentMonth - monthInt) == 1) {
         return true;
-    }else if((currentYear - yearInt) == 1 && currentMonth == 1 && monthInt == 12){
+    } else if((currentYear - yearInt) == 1 && currentMonth == 1 && monthInt == 12) {
         return true;
-    }else{
+    } else {
         return false;
     }
 }
 bool DateOperation::checkSelectedDates(string startingDate, string endingDate)
 {
-    if(checkIntroducedDate(startingDate) && checkIntroducedDate(startingDate) && startingDate <= endingDate){
-           return true;
-       }else{return false;};
+    if(checkIntroducedDate(startingDate) && checkIntroducedDate(startingDate) && startingDate <= endingDate) {
+        return true;
+    } else {
+        return false;
+    };
 }
 bool DateOperation::yearIsLeap(int year)
 {
     if(year % 4 != 0)
         return false;
-    if(year % 100 != 0 || year % 400 == 0){
+
+    if(year % 100 != 0 || year % 400 == 0) {
         return true;
-    }else{return false;}
+    } else {
+        return false;
+    }
 }

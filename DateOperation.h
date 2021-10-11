@@ -18,7 +18,7 @@ class DateOperation
 {
     static string getCurrentDate();
     static bool checkIntroducedDate(string date);
-    static int howManyDaysHaveMonth(int year,int month);
+    static int howManyDaysHaveMonth(int year, int month);
     static int returnCurrentYear();
     static int returnCurrentMonth();
     static bool yearIsLeap(int year);
@@ -29,4 +29,4 @@ public:
     static bool checkSelectedDates(string startingDate, string endingDate);
 };
 
-#endif DATEOPERATION_H
+#endif

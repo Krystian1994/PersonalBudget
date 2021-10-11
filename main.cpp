@@ -43,63 +43,68 @@ char selectCharacterFromUserMenu()
 }
 int main()
 {
-    PersonalBudget personalBudget("users.xml","incomes.xml","expenses.xml");
+    PersonalBudget personalBudget("users.xml", "incomes.xml", "expenses.xml");
 
     char choice;
-    while (true)
-    {
-        if (personalBudget.isTheUserLoggedIn()!=true)
-        {
+
+    while (true) {
+        if (personalBudget.isTheUserLoggedIn() != true) {
             choice = selectCharacterFromMainMenu();
 
-            switch (choice)
-            {
+            switch (choice) {
             case '1':
                 personalBudget.registration();
                 break;
+
             case '2':
                 personalBudget.login();
                 break;
+
             case '8':
                 exit(0);
                 break;
+
             default:
                 cout << endl << "Nie ma takiej opcji w menu." << endl << endl;
                 system("pause");
                 break;
             }
-        }
-        else
-        {
+        } else {
             if (personalBudget.isTheUserLoggedIn())
 
-            choice = selectCharacterFromUserMenu();
+                choice = selectCharacterFromUserMenu();
 
-            switch (choice)
-            {
+            switch (choice) {
             case '1':
                 personalBudget.addIncome();
                 break;
+
             case '2':
                 personalBudget.addExpense();
                 break;
+
             case '3':
                 personalBudget.balanceFromCurrentMonth();
                 break;
+
             case '4':
                 personalBudget.balanceFromPreviousMonth();
                 break;
+
             case '5':
                 personalBudget.balanceFromSelectedTerm();
                 break;
+
             case '6':
                 personalBudget.changePassword();
                 break;
+
             case '7':
                 personalBudget.logOutUser();
                 break;
             }
         }
     }
+
     return 0;
 }

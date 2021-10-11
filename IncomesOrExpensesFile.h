@@ -19,7 +19,7 @@ class IncomesOrExpensesFile: public XmlFile
     const string NAME_OF_ID_OPERATION;
 public:
     IncomesOrExpensesFile(string fileName, string nameOfIdOperation)
-    : FILE_NAME(fileName), XmlFile(fileName), NAME_OF_ID_OPERATION(nameOfIdOperation)
+        : FILE_NAME(fileName), XmlFile(fileName), NAME_OF_ID_OPERATION(nameOfIdOperation)
     {
         idLastOperation = 0;
     };
@@ -28,4 +28,4 @@ public:
     int returnLastIdOperation();
 };
 
-#endif INCOMESOREXPENSESFILE_H
+#endif
