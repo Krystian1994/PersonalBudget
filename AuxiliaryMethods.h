@@ -17,4 +17,5 @@ public:
     static string convertionIntToString(int number);
     static char loadCharacter();
 };
+
 #endif

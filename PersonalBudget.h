@@ -15,8 +15,8 @@ class PersonalBudget
     const string INCOME_FILE_NAME;
     const string EXPENSE_FILE_NAME;
 public:
-    PersonalBudget(string nameOfUsersFile,string incomeFileName, string expenseFileName)
-    : usersMenu(nameOfUsersFile), INCOME_FILE_NAME(incomeFileName), EXPENSE_FILE_NAME(expenseFileName)
+    PersonalBudget(string nameOfUsersFile, string incomeFileName, string expenseFileName)
+        : usersMenu(nameOfUsersFile), INCOME_FILE_NAME(incomeFileName), EXPENSE_FILE_NAME(expenseFileName)
     {
         balanceMenu = NULL;
     };
@@ -36,9 +36,5 @@ public:
     void changePassword();
     void logOutUser();
 };
-
-
-
-
 
 #endif

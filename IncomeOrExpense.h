@@ -14,12 +14,11 @@ class IncomeOrExpense
 public:
     string date;
 
-    int setUserId(int newUserId);
-    int setOperationId(int newOperationId);
-    string setDate(string newDate);
-    string setItem(string newItem);
-    double setAmount(double newAmount);
-
+    void setUserId(int newUserId);
+    void setOperationId(int newOperationId);
+    void setDate(string newDate);
+    void setItem(string newItem);
+    void setAmount(double newAmount);
     int getUserId();
     int getOperationId();
     string getDate();
@@ -27,5 +26,4 @@ public:
     double getAmount();
 };
 
-
-#endif INCOMEOREXPENSE_H
+#endif
