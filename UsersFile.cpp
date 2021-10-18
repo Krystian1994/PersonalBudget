@@ -3,7 +3,7 @@
 void UsersFile::addUserToFile(User user)
 {
     CMarkup xml;
-    bool fileExists = xml.Load(returnFileName());
+    bool fileExists = xml.Load(getFileName());
 
     if (!fileExists) {
         xml.SetDoc("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n");
@@ -26,7 +26,7 @@ vector <User> UsersFile::loadUsersFromFile()
     vector <User> users;
     User user;
     CMarkup xml;
-    bool fileExists = xml.Load(returnFileName());
+    bool fileExists = xml.Load(getFileName());
     xml.ResetPos(); // top of document
     xml.FindElem(); // ORDER element is root
     xml.IntoElem(); // inside ORDER
@@ -50,7 +50,7 @@ vector <User> UsersFile::loadUsersFromFile()
 void UsersFile::removeDataInFile()
 {
     CMarkup xml;
-    bool fileExists = xml.Load(returnFileName());
+    bool fileExists = xml.Load(getFileName());
     xml.ResetMainPos();
 
     while(xml.FindElem()) {
@@ -63,7 +63,7 @@ void UsersFile::saveAllUsersToFile(vector <User> &users)
 {
     for(int i = 0; i <  users.size(); i++) {
         CMarkup xml;
-        bool fileExists = xml.Load(returnFileName());
+        bool fileExists = xml.Load(getFileName());
 
         if (!fileExists) {
             xml.SetDoc("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n");

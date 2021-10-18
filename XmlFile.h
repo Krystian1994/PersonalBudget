@@ -13,7 +13,7 @@ class XmlFile
 public:
     XmlFile(string nameOfFile): NAME_OF_FILE(nameOfFile) {};
     bool fileIsEmpty();
-    string returnFileName();
+    string getFileName();
 };
 
 #endif

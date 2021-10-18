@@ -48,7 +48,7 @@ int main()
     char choice;
 
     while (true) {
-        if (personalBudget.isTheUserLoggedIn() != true) {
+        if (!personalBudget.isTheUserLoggedIn()) {
             choice = selectCharacterFromMainMenu();
 
             switch (choice) {

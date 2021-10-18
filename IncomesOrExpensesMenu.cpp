@@ -11,7 +11,7 @@ IncomeOrExpense IncomesOrExpensesMenu::giveNewIncomeOrExpenseData()
 {
     IncomeOrExpense incomeOrExpense;
     incomeOrExpense.setUserId(ID_LOGGED_USER);
-    incomeOrExpense.setOperationId(incomesOrExpensesFile.returnLastIdOperation() + 1); // dodaj id operacji
+    incomeOrExpense.setOperationId(incomesOrExpensesFile.returnLastIdOperation() + 1);
     cout << "Wybierz date operacji finansowej: ";
     incomeOrExpense.setDate(DateOperation::getSelectedDate());
     cout << "Wpisz czego dotyczy operacja finansowa: ";
@@ -36,7 +36,7 @@ double IncomesOrExpensesMenu::showBalanceCurrentMonth()
     for(int i = 0; i < incomesOrExpenses.size(); i++) {
         date = incomesOrExpenses[i].getDate();
 
-        if(DateOperation::ifLoadDateIsCurrentMonth(date)) {
+        if(DateOperation::dateIsCurrentMonth(date)) {
             cout << incomesOrExpenses[i].getUserId() << endl;
             cout << incomesOrExpenses[i].getOperationId() << endl;
             cout << incomesOrExpenses[i].getDate() << endl;
@@ -58,7 +58,7 @@ double IncomesOrExpensesMenu::showBalancePreviousMonth()
     for(int i = 0; i < incomesOrExpenses.size(); i++) {
         date = incomesOrExpenses[i].getDate();
 
-        if(DateOperation::ifLoadDateIsPreviousMonth(date)) {
+        if(DateOperation::dateIsPreviousMonth(date)) {
             cout << incomesOrExpenses[i].getUserId() << endl;
             cout << incomesOrExpenses[i].getOperationId() << endl;
             cout << incomesOrExpenses[i].getDate() << endl;

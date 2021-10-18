@@ -20,7 +20,7 @@ User UsersMenu::giveNewUserData()
     do {
         cout << "Podaj login: ";
         user.setLogin(AuxiliaryMethods::loadLine());
-    } while (userNameExist(user.getLogin()) == true);
+    } while (userNameExist(user.getLogin()));
 
     cout << "Podaj haslo: ";
     user.setPassword(AuxiliaryMethods::loadLine());

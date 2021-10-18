@@ -46,7 +46,7 @@ string DateOperation::getSelectedDate()
     case 2:
         while(true) {
             cout << "Wprowadz date w formacie rrrr-mm-dd" << endl;
-            cout << "Date nalezy wprowadzic w przedziale 2000-01-01 do " << returnCurrentYear() << '-' << returnCurrentMonth() << '-' << howManyDaysHaveMonth(returnCurrentYear(), returnCurrentMonth()) << endl;
+            cout << "Date nalezy wprowadzic w przedziale 2000-01-01 do " << getCurrentYear() << '-' << getCurrentMonth() << '-' << howManyDaysHaveMonth(getCurrentYear(), getCurrentMonth()) << endl;
             string selectedDateByUser = AuxiliaryMethods::loadLine();
 
             if(checkIntroducedDate(selectedDateByUser) == true) {
@@ -69,8 +69,8 @@ bool DateOperation::checkIntroducedDate(string date)
     int monthInt = 0;
     int daysInt = 0;
     int minYear = 2000;
-    int currentYear = returnCurrentYear();
-    int currentMonth = returnCurrentMonth();
+    int currentYear = getCurrentYear();
+    int currentMonth = getCurrentMonth();
 
     for(int i = 0; i < 4; i++) {
         yearString += date[i];
@@ -137,7 +137,7 @@ int DateOperation::howManyDaysHaveMonth(int year, int month)
         return 28;
     }
 }
-int DateOperation::returnCurrentYear()
+int DateOperation::getCurrentYear()
 {
     SYSTEMTIME st;
     GetSystemTime(&st);
@@ -145,7 +145,7 @@ int DateOperation::returnCurrentYear()
     year = st.wYear;
     return year;
 }
-int DateOperation::returnCurrentMonth()
+int DateOperation::getCurrentMonth()
 {
     SYSTEMTIME st;
     GetSystemTime(&st);
@@ -153,7 +153,7 @@ int DateOperation::returnCurrentMonth()
     month = st.wMonth;
     return month;
 }
-bool DateOperation::ifLoadDateIsCurrentMonth(string date)
+bool DateOperation::dateIsCurrentMonth(string date)
 {
     string currentDate = getCurrentDate();
 
@@ -165,10 +165,10 @@ bool DateOperation::ifLoadDateIsCurrentMonth(string date)
 
     return true;
 }
-bool DateOperation::ifLoadDateIsPreviousMonth(string date)
+bool DateOperation::dateIsPreviousMonth(string date)
 {
-    int currentMonth = returnCurrentMonth();
-    int currentYear = returnCurrentYear();
+    int currentMonth = getCurrentMonth();
+    int currentYear = getCurrentYear();
     string yearString = "";
     int yearInt = 0;
     string monthString = "";
@@ -196,20 +196,9 @@ bool DateOperation::ifLoadDateIsPreviousMonth(string date)
 }
 bool DateOperation::checkSelectedDates(string startingDate, string endingDate)
 {
-    if(checkIntroducedDate(startingDate) && checkIntroducedDate(startingDate) && startingDate <= endingDate) {
-        return true;
-    } else {
-        return false;
-    };
+    return(checkIntroducedDate(startingDate) && checkIntroducedDate(startingDate) && startingDate <= endingDate);
 }
 bool DateOperation::yearIsLeap(int year)
 {
-    if(year % 4 != 0)
-        return false;
-
-    if(year % 100 != 0 || year % 400 == 0) {
-        return true;
-    } else {
-        return false;
-    }
+    return((year % 4 == 0)&&(year % 100 != 0 || year % 400 == 0));
 }
