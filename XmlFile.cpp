@@ -3,7 +3,7 @@
 bool XmlFile::fileIsEmpty()
 {
     CMarkup xml;
-    bool fileExists = xml.Load(returnFileName());
+    bool fileExists = xml.Load(getFileName());
 
     if (!fileExists) {
         return false;
@@ -11,7 +11,7 @@ bool XmlFile::fileIsEmpty()
 
     return true;
 }
-string XmlFile::returnFileName()
+string XmlFile::getFileName()
 {
     return NAME_OF_FILE;
 }

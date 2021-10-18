@@ -19,13 +19,13 @@ class DateOperation
     static string getCurrentDate();
     static bool checkIntroducedDate(string date);
     static int howManyDaysHaveMonth(int year, int month);
-    static int returnCurrentYear();
-    static int returnCurrentMonth();
+    static int getCurrentYear();
+    static int getCurrentMonth();
     static bool yearIsLeap(int year);
 public:
     static string getSelectedDate();
-    static bool ifLoadDateIsCurrentMonth(string date);
-    static bool ifLoadDateIsPreviousMonth(string date);
+    static bool dateIsCurrentMonth(string date);
+    static bool dateIsPreviousMonth(string date);
     static bool checkSelectedDates(string startingDate, string endingDate);
 };
 
