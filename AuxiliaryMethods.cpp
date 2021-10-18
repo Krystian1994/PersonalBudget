@@ -62,3 +62,8 @@ char AuxiliaryMethods::loadCharacter()
 
     return character;
 }
+double AuxiliaryMethods::changeToNegativeNumber(double number)
+{
+    double negativeNumber = 0 - number;
+    return negativeNumber;
+}

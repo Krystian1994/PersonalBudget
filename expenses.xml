@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Operations>
+<Operation>
+<userId>1</userId>
+<expenseId>1</expenseId>
+<date>2021-10-18</date>
+<item>Kupno otrzasarki</item>
+<amount>6700.230000</amount>
+</Operation>
+<Operation>
+<userId>1</userId>
+<expenseId>6701</expenseId>
+<date>2008-02-13</date>
+<item>Kupno ciganika</item>
+<amount>214.124300</amount>
+</Operation>
+</Operations>

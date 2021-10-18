@@ -10,6 +10,7 @@ using namespace std;
 class AuxiliaryMethods
 {
 public:
+    static double changeToNegativeNumber(double number);
     static string loadLine();
     static double loadNumber();
     static int convertionStringToInt(string number);

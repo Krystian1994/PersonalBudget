@@ -5,6 +5,7 @@
 
 #include "IncomesOrExpensesMenu.h"
 #include "DateOperation.h"
+#include "AuxiliaryMethods.h"
 
 using namespace std;
 

@@ -21,7 +21,7 @@ void BalanceMenu::showBalanceCurrentMonth()
     cout << "Przychody w obecnym miesiacu: " << endl << endl;
     double incomesSum = income.showBalanceCurrentMonth();
     cout << endl << "Wydatki w obecnym miesiacu: " << endl;
-    double expensesSum = expense.showBalanceCurrentMonth();
+    double expensesSum = AuxiliaryMethods::changeToNegativeNumber(expense.showBalanceCurrentMonth());
     cout << endl << "Suma przychodow w obecnym miesiacu wynosi " << incomesSum << endl;
     cout << endl << "Suma wydatkow w obecnym miesiacu wynosi " << expensesSum << endl;
     balance = incomesSum + expensesSum;
@@ -35,7 +35,7 @@ void BalanceMenu::showBalancePreviousMonth()
     cout << "Przychody w poprzednim miesiacu: " << endl << endl;
     double incomesSum = income.showBalancePreviousMonth();
     cout << "Wydatki w poprzednim mesiacu: " << endl;
-    double expensesSum = expense.showBalancePreviousMonth();
+    double expensesSum = AuxiliaryMethods::changeToNegativeNumber(expense.showBalancePreviousMonth());
     cout << endl << "Suma przychodow w poprzednim miesiacu wynosi " << incomesSum << endl;
     cout << endl << "Suma wydatkow w poprzednim miesiacu wynosi " << expensesSum << endl;
     balance = incomesSum + expensesSum;
@@ -59,7 +59,7 @@ void BalanceMenu::showBalanceSelectedPeriod()
         cout << "Przychody w wybranym okresie: " << endl << endl;
         double incomesSum = income.showBalanceSelectedPeriod(startingDate, endingDate);
         cout << "Wydatki w wybranym okresie: " << endl;
-        double expensesSum = expense.showBalanceSelectedPeriod(startingDate, endingDate);
+        double expensesSum = AuxiliaryMethods::changeToNegativeNumber(expense.showBalanceSelectedPeriod(startingDate, endingDate));
         cout << endl << "Suma przychodow w wybranym okresie wynosi " << incomesSum << endl;
         cout << endl << "Suma wydatkow w wybranym okresie wynosi " << expensesSum << endl;
         balance = incomesSum + expensesSum;
